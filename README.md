@@ -48,7 +48,6 @@ The command to run our method is as follows:
 python run_expt.py -s confounder -d CUB -t waterbird_complete95 -c forest2water2 --lr 0.00001 --batch_size 128 --weight_decay 1.0 --model resnet50 --n_epochs 300 --reweight_groups --robust --generalization_adjustment 2 --epsilon 12/255
 python run_expt.py -s confounder -d CUB -t waterbird_complete95 -c forest2water2 --lr 0.00001 --batch_size 128 --weight_decay 1.0 --model resnet50 --n_epochs 300 --reweight_groups --robust --generalization_adjustment 0 --epsilon 36/255 --edited_mislabel
 python run_expt.py -s confounder -d CUB -t waterbird_complete95 -c forest2water2 --lr 0.00001 --batch_size 128 --weight_decay 1.0 --model resnet50 --n_epochs 300 --reweight_groups --robust --generalization_adjustment 2 --epsilon 12/255 --shift
-
 ```
 
 ### CelebA
