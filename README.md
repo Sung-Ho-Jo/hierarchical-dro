@@ -10,7 +10,7 @@ The experiments are based on the code:
 
 ## Abstract
 
-Conventional supervised learning methods are often vulnerable to spurious correlations, particularly under distribution shifts in test data. To address this issue, several app roaches, most notably Group DRO, have been developed. While these methods are highly robust to subpopulation or group shifts, they remain vulnerable to within-group distributional shifts, which frequently occur in minority groups with limited samples. We propose a hierarchical extension of Group DRO to address both inter-group and intra-group uncertainties. Our proposed framework is robust to distribution shifts at multiple levels. We demonstrate through extensive experiments on modified benchmark datasets--Waterbirds, CelebA, and CMNIST--that the proposed method consistently outperforms conventional Group DRO and related robust learning methods across both standard and shifted scenarios. By maintaining robustness across diverse distributional deviations, our results highlight the importance of broadening the ambiguity set to better account for various types of distributional uncertainties.
+Conventional supervised learning methods are often vulnerable to spurious correlations, particularly under distribution shifts in test data. To address this issue, several approaches, most notably Group DRO, have been developed. While these methods are highly robust to subpopulation or group shifts, they remain vulnerable to intra-group distributional shifts, which frequently occur in minority groups with limited samples. We propose a hierarchical extension of Group DRO that addresses both inter-group and intra-group uncertainties, providing robustness to distribution shifts at multiple levels. We also introduce new benchmark settings that simulate realistic minority group distribution shifts—an important yet previously underexplored challenge in spurious correlation research. Our method demonstrates strong robustness under these conditions—where existing robust learning methods consistently fail—while also achieving superior performance on standard benchmarks. These results highlight the importance of broadening the ambiguity set to better capture both inter-group and intra-group distributional uncertainties.
 
 ## Prerequisites
 - python 3.6.8
@@ -58,6 +58,7 @@ The command to run our method is as follows:
 python run_expt.py -s confounder -d CelebA -t Blond_Hair -c Male --lr 0.00001 --batch_size 128 --weight_decay 0.01 --model resnet50 --n_epochs 30 --reweight_groups --robust --generalization_adjustment 1 --epsilon 12/255
 python run_expt.py -s confounder -d CelebA -t Blond_Hair -c Male --lr 0.00001 --batch_size 128 --weight_decay 0.01 --model resnet50 --n_epochs 30 --reweight_groups --robust --generalization_adjustment 1 --epsilon 84/255 --shift
 ```
+
 
 
 
