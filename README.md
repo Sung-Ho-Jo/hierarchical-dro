@@ -1,11 +1,9 @@
 # Mitigating Spurious Correlation via Distributionally Robust Learning with Hierarchical Ambiguity Sets
 
-This code implements the algorithm from the following paper:
+This repository contains the official implementation of the paper
+accepted at **ICLR 2026**.
 
-> Mitigating Spurious Correlation via Distributionally Robust Learning with Hierarchical Ambiguity Sets  
-> ICLR 2026
-
-The experiments are based on the code:
+The experiments are based on the following codebases:
 - [Group DRO](https://github.com/kohpangwei/group_DRO)
 - [LISA](https://github.com/huaxiuyao/LISA)
 
@@ -59,6 +57,7 @@ The command to run our method is as follows:
 python run_expt.py -s confounder -d CelebA -t Blond_Hair -c Male --lr 0.00001 --batch_size 128 --weight_decay 0.01 --model resnet50 --n_epochs 30 --reweight_groups --robust --generalization_adjustment 1 --epsilon 12/255
 python run_expt.py -s confounder -d CelebA -t Blond_Hair -c Male --lr 0.00001 --batch_size 128 --weight_decay 0.01 --model resnet50 --n_epochs 30 --reweight_groups --robust --generalization_adjustment 1 --epsilon 84/255 --shift
 ```
+
 
 
 
